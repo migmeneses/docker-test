@@ -1,5 +1,11 @@
 node {
     checkout scm
-    def customImage = docker.build("my-image:${env.BUILD_ID}")
-    customImage.push()
+
+    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+
+        def customImage = docker.build("migmeneses/docker-test")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
+    }
 }
