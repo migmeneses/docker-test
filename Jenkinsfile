@@ -32,5 +32,10 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
+    
+    stage('Run Cont') {
+    /* Now we can run the container locally and see how it does */
+    sh 'docker run -d migmeneses/nodejs-app'
+        }
     }
 }
