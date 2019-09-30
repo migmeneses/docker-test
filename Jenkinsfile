@@ -35,7 +35,7 @@ node {
     
     stage('Run container') {
     /* Now we can run the container locally and see how it does */
-    sh 'docker run -d migmeneses/nodejs-webapp'
+    sh 'docker run -d -P migmeneses/nodejs-webapp'
         }
     }
 }
