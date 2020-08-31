@@ -1,5 +1,5 @@
 # docker-test
-This exercise will pull a Node.js version 12.13 image and run a docker container with it,
+This exercise will pull a Node.js image and run a docker container with it,
 the one says "Hello World!"
 
 This repository was created to demonstrate:
